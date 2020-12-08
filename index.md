@@ -1,12 +1,10 @@
-## Welcome to GitHub Pages
+## Clean Entry
 
-You can use the [editor on GitHub](https://github.com/arbarkan/cleanentry/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Clean Entry is a realization of a contactless door entry product developed over a semester in the Human-Centered Design course at UC, Berkeley. In this page, I cover highlights of the design process as well as an overview of the prototype's construction and functionality.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### The Problem Opportunity Gap (POG)
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+What began as an idea to enable restroom doors with contactless entry expanded in scope significantly after conducting initial user research. Our findings after performing both virtual user interviews and in-person subject observation yielded some important insights that reflected current trends in society. For example, we discovered that 
 
 ```markdown
 Syntax highlighted code block
