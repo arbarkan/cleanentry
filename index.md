@@ -1,10 +1,15 @@
-## Clean Entry
+# Clean Entry
 
 Clean Entry is a realization of a contactless door entry product developed over a semester in the Human-Centered Design course at UC, Berkeley. In this page, I cover highlights of the design process as well as an overview of the prototype's construction and functionality.
 
-### The Problem Opportunity Gap (POG)
+## The Research and Problem Opportunity Gap (POG)
 
-What began as an idea to enable restroom doors with contactless entry expanded in scope significantly after conducting initial user research. Our findings after performing both virtual user interviews and in-person subject observation yielded some important insights that reflected current trends in society. For example, we discovered that 
+What began as an idea to enable restroom doors with contactless entry expanded in scope significantly after conducting initial user research. Our findings after performing both virtual user interviews and in-person subject observation yielded some important insights that reflected current trends in society. For example, we discovered that most individuals are primarily concerned with the lack of cleanliness of surfaces on doors, which were largely attributed to heighten sanitation concerns due to COVID-19. Somewhat expectedly, all of our interviewees expressed preferences for doors that were automated due to increased convenience of operation and limited reliance on physical contact.
+>I always kick open public doors or use my shoulder because I'm afraid other people's germs are on them."
+> - Undergraduate Student
+
+
+### 
 
 ```markdown
 Syntax highlighted code block
