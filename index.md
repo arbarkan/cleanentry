@@ -23,5 +23,11 @@ In the process of generating design concepts, we tried to focus the scope of our
 ![Image](/media/doorkit.PNG)
 #### Conceptual drawings for the door kit that involves placeable proximity sensor modules and a door actuation mechanism.
 
-The concept of the door kit is to provide users with a set of components that allows them to easily implement custom door automation for their swivel doors. The kit leverages proximity sensing and a door actuator to provide contactless door automation.
+The concept of the door kit is to provide users with a set of components that allows them to easily implement custom door automation for their swivel doors. The kit leverages proximity sensing and a door actuator to provide contactless door automation. In the above conceptual drawing, the proximity sensor is integrated into a hand sanitizer in order to encourage its usage and thus promote sanitary habits in public. The sensors can be placed anywhere that might suit the customer's needs. For exxample, a sensor could be placed lower to the ground to better detect individuals who use wheelchairs as well.
 
+## Low-Fidelity Prototype Testing
+
+There were many aspects of our concept that we still needed to learn more about before we were ready to commit to a final design. In order to better understand the social and intangible aspects of our concept, we decided to perform some testing with a low-fidelity prototype. Using cardboard, we created some basic mock-up components that would allow us to simulate interacting with a door that has been retrofitted with our door kit. We sought to learn how user's responded to the option of opening the door using a multitude of automated contactless options such as using the hand sanitizer or just the lone proximity sensor versus the standard manual mode of swivel door operation. The images below show examples of how subjects interacted with our low-fidelity prototype.
+
+![Image](/media/lofi_prox.HEIC)
+![Image](/media/lofi_sanitizer.JPG)
