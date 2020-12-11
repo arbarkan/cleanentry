@@ -5,6 +5,7 @@ Clean Entry is a realization of a contactless door entry product developed over 
 ## The Research and Problem Opportunity Gap (POG)
 
 What began as an idea to enable restroom doors with contactless entry expanded in scope significantly after conducting initial user research. Our findings after performing both virtual user interviews and in-person subject observation yielded some important insights that reflected current trends in society. For example, we discovered that most individuals are primarily concerned with the lack of cleanliness of surfaces on doors, which were largely attributed to heighten sanitation concerns due to COVID-19. Somewhat expectedly, all of our interviewees expressed preferences for doors that were automated due to increased convenience of operation and limited reliance on physical contact.
+
 >I always kick open public doors or use my shoulder because I'm afraid other people's germs are on them.
 > - Undergraduate Student
 >I haven't used a non-automatic door since the pandemic started.
@@ -18,7 +19,7 @@ It became clear that the problem of sanitation and convenience in entryways exte
 
 In the process of generating design concepts, we tried to focus the scope of our solution to be exclusively door augmentations as opposed to full door replacements. In this way, it would be possible to accommodate a wider range of potential consumers in terms of accessibility. Other product requirements that arose from our design process were inspired by several of our prioritized value opportunity attributes. Specifically, we determined that the solution should reduce the public concern surrounding exposure to germs and viruses. It should also be useable by differently abled individuals without additional assistance. These requirements and others resulted in some innovative ideas for addressing our pproblem space. However, one concept in particular stood out from the others. We called this concept the door kit.
 
-
+![Image](/media/doorkit.png)
 
 ### 
 
