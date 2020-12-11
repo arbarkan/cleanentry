@@ -41,4 +41,6 @@ Our final design for the prototype door kit includes the following components:
 * Set of wireless proximity sensor modules
 * Door actuation mechanism
 * Latch disengager
+Each component is installable by the end user and the door kit results in a fully automated, proximity-activated swivel door for a small public space. The only component in the above list not completely explained previously is the latch disengager, which is used to prevent the standard swivel door from engaging its bolt in the frame of the door. This allows the door actuation mechanism to control the opening and closing of the door independent of the original door latch.
 
+To realize our final design, we decided to build both a proximity sensor module and a scale model of the door actuation mechanism. First, I will describe the 
