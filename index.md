@@ -19,7 +19,7 @@ It became clear that the problem of sanitation and convenience in entryways exte
 
 In the process of generating design concepts, we tried to focus the scope of our solution to be exclusively door augmentations as opposed to full door replacements. In this way, it would be possible to accommodate a wider range of potential consumers in terms of accessibility. Other product requirements that arose from our design process were inspired by several of our prioritized value opportunity attributes. Specifically, we determined that the solution should reduce the public concern surrounding exposure to germs and viruses. It should also be useable by differently abled individuals without additional assistance. These requirements and others resulted in some innovative ideas for addressing our pproblem space. However, one concept in particular stood out from the others. We called this concept the door kit.
 
-![Image](/media/doorkit.png)
+![Image](/media/doorkit.PNG)
 
 ### 
 
