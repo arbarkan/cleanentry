@@ -29,5 +29,16 @@ The concept of the door kit is to provide users with a set of components that al
 
 There were many aspects of our concept that we still needed to learn more about before we were ready to commit to a final design. In order to better understand the social and intangible aspects of our concept, we decided to perform some testing with a low-fidelity prototype. Using cardboard, we created some basic mock-up components that would allow us to simulate interacting with a door that has been retrofitted with our door kit. We sought to learn how user's responded to the option of opening the door using a multitude of automated contactless options such as using the hand sanitizer or just the lone proximity sensor versus the standard manual mode of swivel door operation. The images below show examples of how subjects interacted with our low-fidelity prototype.
 
-![Image](/media/lofi_prox.HEIC)
+![Image](/media/lofi_prox.jpg)
 ![Image](/media/lofi_sanitizer.JPG)
+#### Low-fidelity prototype images showing two options for sensor placement and usage by subjects.
+
+We learned from this low-fidelity prototyping that individuals appreciated the convenience of the automated option and that it would encourage them to be less concerned about the transmission of germs or viruses. In terms of constructive feedback, some subjects felt afraid that the automated system might be dangerous. It will be important to implement some safety precautions in the development of a final product. Additionally, there was some concern that it might not be immediately intuitive without some instruction. To address this, we would hope to include some form of large sign to indicate that the door is proximity activated in one way or another.
+
+## The Final Prototype Design
+
+Our final design for the prototype door kit includes the following components:
+* Set of wireless proximity sensor modules
+* Door actuation mechanism
+* Latch disengager
+
