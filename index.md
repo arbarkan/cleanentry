@@ -2,6 +2,8 @@
 
 Clean Entry is a realization of a contactless door entry product developed over a semester in the Human-Centered Design course at UC, Berkeley. In this page, I cover highlights of the design process as well as an overview of the prototype's construction and functionality.
 
+![Image](/media/operation.gif)
+
 ## The Research and Problem Opportunity Gap (POG)
 
 What began as an idea to enable restroom doors with contactless entry expanded in scope significantly after conducting initial user research. Our findings after performing both virtual user interviews and in-person subject observation yielded some important insights that reflected current trends in society. For example, we discovered that most individuals are primarily concerned with the lack of cleanliness of surfaces on doors, which were largely attributed to heighten sanitation concerns due to COVID-19. Somewhat expectedly, all of our interviewees expressed preferences for doors that were automated due to increased convenience of operation and limited reliance on physical contact.
@@ -39,7 +41,7 @@ We learned from this low-fidelity prototyping that individuals appreciated the c
 
 Our final design for the prototype door kit includes the following components:
 * Set of wireless proximity sensor modules
-* Door actuation mechanism
+* Door actuation mechanism (scale model)
 * Latch disengager
 Each component is installable by the end user and the door kit results in a fully automated, proximity-activated swivel door for a small public space. The only component in the above list not completely explained previously is the latch disengager, which is used to prevent the standard swivel door from engaging its bolt in the frame of the door. This allows the door actuation mechanism to control the opening and closing of the door independent of the original door latch.
 
@@ -48,4 +50,4 @@ To realize our final design, we decided to build both a proximity sensor module 
 ![Image](/media/module_open.jpg)
 ![Image](/media/module_closed.jpg)
 
-
+Next, I will describe the door actuation mechanism. This part of the prototype is designed to be a scale model of our intended product due to budget and time constraints. The actuator is driven by a small servomotor connected to a 3d-printed 2-bar linkage. This linkage is what imparts force on the door in order to open and close it in its frame. The RF receiver component from the RF link pair is included in the door actuation mechanism. An HT12D is used to decode the signal from the RF receiver and send a digital signal to a [Huzzah32 Feather microcontroller](https://learn.adafruit.com/adafruit-huzzah32-esp32-feather), which controls the logic of the system. Upon receiving this digital signal, a hardware interrupt is triggered, and the system enters its opening and closing routine.
