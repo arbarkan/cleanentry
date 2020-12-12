@@ -1,4 +1,4 @@
-# Clean Entry
+![Image](/media/cleanentryfull.png)
 
 Clean Entry is a realization of a contactless door entry product developed over a semester in the Human-Centered Design course at UC, Berkeley. In this page, I cover highlights of the design process as well as an overview of the prototype's construction and functionality.
 
