@@ -60,7 +60,7 @@ Next, I will describe the door actuation mechanism. This part of the prototype i
 
 Upon receiving a digital signal from the decoder IC, a hardware interrupt is triggered on the microcontroller, and the system enters its opening and closing routine. The routine sends a PWM signal (typical for servo control at 50Hz with approximately 1-2ms pulse length) to control the servo motor between its full range of motion for the swivel door, pausing briefly at full open to allow time for entry. The code used for controlling the door actuation mechanism can be seen below.
 
-'''
+```
 // Basic script for controlling door mechanism via wireless proximity sensor module
 //
 
@@ -135,4 +135,4 @@ void loop() {
 
   
 }
-'''
+```
