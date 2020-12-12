@@ -43,4 +43,9 @@ Our final design for the prototype door kit includes the following components:
 * Latch disengager
 Each component is installable by the end user and the door kit results in a fully automated, proximity-activated swivel door for a small public space. The only component in the above list not completely explained previously is the latch disengager, which is used to prevent the standard swivel door from engaging its bolt in the frame of the door. This allows the door actuation mechanism to control the opening and closing of the door independent of the original door latch.
 
-To realize our final design, we decided to build both a proximity sensor module and a scale model of the door actuation mechanism. First, I will describe the 
+To realize our final design, we decided to build both a proximity sensor module and a scale model of the door actuation mechanism. First, I will describe the proximity sensor module design. The proximity sensing is accomplished using an [infrared (IR) sensor from Pololu](https://www.pololu.com/product/1134) and transmits a digital signal when activated. This signal is encoded using a dedicated HT12E encoder IC. The encoded message is transmitted over 433MHz radio frequency (RF) using the [Superheterodyne 433MHz RF transmitter/receiver pair](https://www.amazon.com/RioRand-Superheterodyne-transmitter-receiver-3400/dp/B00HEDRHG6). The entire circuit is placed in a 3D-printed case, with the IR sensor centrally located and facing outward. Images of the open and closed sensor module can be seen below.
+
+![Image](/media/module_open.jpg)
+![Image](/media/module_closed.jpg)
+
+
