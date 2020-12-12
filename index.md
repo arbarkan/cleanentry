@@ -43,6 +43,10 @@ Our final design for the prototype door kit includes the following components:
 * Set of wireless proximity sensor modules
 * Door actuation mechanism (scale model)
 * Latch disengager
+The image below shows a functional block diagram explaining the electromechanical components of the system.
+
+[Image](/media/diagram.PNG)
+
 Each component is installable by the end user and the door kit results in a fully automated, proximity-activated swivel door for a small public space. The only component in the above list not completely explained previously is the latch disengager, which is used to prevent the standard swivel door from engaging its bolt in the frame of the door. This allows the door actuation mechanism to control the opening and closing of the door independent of the original door latch.
 
 To realize our final design, we decided to build both a proximity sensor module and a scale model of the door actuation mechanism. First, I will describe the proximity sensor module design. The proximity sensing is accomplished using an [infrared (IR) sensor from Pololu](https://www.pololu.com/product/1134) and transmits a digital signal when activated. This signal is encoded using a dedicated HT12E encoder IC. The encoded message is transmitted over 433MHz radio frequency (RF) using the [Superheterodyne 433MHz RF transmitter/receiver pair](https://www.amazon.com/RioRand-Superheterodyne-transmitter-receiver-3400/dp/B00HEDRHG6). The entire circuit is placed in a 3D-printed case, with the IR sensor centrally located and facing outward. Images of the open and closed sensor module can be seen below.
@@ -50,4 +54,85 @@ To realize our final design, we decided to build both a proximity sensor module 
 ![Image](/media/module_open.jpg)
 ![Image](/media/module_closed.jpg)
 
-Next, I will describe the door actuation mechanism. This part of the prototype is designed to be a scale model of our intended product due to budget and time constraints. The actuator is driven by a small servomotor connected to a 3d-printed 2-bar linkage. This linkage is what imparts force on the door in order to open and close it in its frame. The RF receiver component from the RF link pair is included in the door actuation mechanism. An HT12D is used to decode the signal from the RF receiver and send a digital signal to a [Huzzah32 Feather microcontroller](https://learn.adafruit.com/adafruit-huzzah32-esp32-feather), which controls the logic of the system. Upon receiving this digital signal, a hardware interrupt is triggered, and the system enters its opening and closing routine.
+Next, I will describe the door actuation mechanism. This part of the prototype is designed to be a scale model of our intended product due to budget and time constraints. The actuator is driven by a small servomotor connected to a 3d-printed 2-bar linkage. This linkage is what imparts force on the door in order to open and close it in its frame. The RF receiver component from the RF link pair is included in the door actuation mechanism. An HT12D is used to decode the signal from the RF receiver and send a digital signal to a [Huzzah32 Feather microcontroller](https://learn.adafruit.com/adafruit-huzzah32-esp32-feather), which controls the logic of the system.
+
+![Image](/media/door.jpg)
+
+Upon receiving a digital signal from the decoder IC, a hardware interrupt is triggered on the microcontroller, and the system enters its opening and closing routine. The routine sends a PWM signal (typical for servo control at 50Hz with approximately 1-2ms pulse length) to control the servo motor between its full range of motion for the swivel door, pausing briefly at full open to allow time for entry. The code used for controlling the door actuation mechanism can be seen below.
+
+'''
+// Basic script for controlling door mechanism via wireless proximity sensor module
+//
+
+#define SERVOMIN    2000  // This is the 'minimum' pulse length for range of motion
+#define SERVOMAX    4000  // This is the 'maximum' pulse length for range of motion
+#define LED_PIN     13    // LED read out for debug and indication
+#define SERVO_PIN   27    // Servo PWM pin
+#define RF_PIN      15    // Digital input from RF decoder
+
+#define CHANNEL_0   0     // Use channel 0
+#define FREQ_SERVO  50    // Servo PWM frequency ~50Hz  
+#define RESOLUTION  16    // Use 16-bit resolution for PWM
+
+bool door_opening = false;  // State of door operation (normally closed and false)
+bool sensed = false;        // State of sensor module
+uint16_t val = 0;           // Store current position
+
+// Define hardware interrupt handler for RF comm
+void IRAM_ATTR detectOpen() {
+  if (~door_opening) {
+    sensed = true;
+  }
+}
+
+void setup() {
+  // Begin setup routine
+
+  Serial.begin(9600);
+
+  // Assign RF_PIN as digital input
+  pinMode(RF_PIN, INPUT);
+  pinMode(RF_PIN, INPUT_PULLUP);
+  
+  // Setup PWM output
+  ledcSetup(0, 50, 16);
+  ledcAttachPin(SERVO_PIN, 0);
+
+  // Setup hardware interrupt
+  attachInterrupt(digitalPinToInterrupt(RF_PIN), detectOpen, CHANGE);
+
+  delay(2000);
+  
+}
+
+void loop() {
+
+  if (sensed) {
+    door_opening = true;
+    Serial.println("Opening door!");
+    for (uint16_t command = SERVOMIN; command <= SERVOMAX; ){
+      ledcWrite(0, command);
+      command = command + 5;
+      Serial.println(command);
+      delay(5);
+      val = command;
+    }
+    delay(100);
+    ledcWrite(0, 0);
+    Serial.println("Door has been opened.");
+    delay(3000);
+    for (uint16_t command = val; command >= SERVOMIN; ){
+      ledcWrite(0, command);
+      command = command - 5;
+      Serial.println(command);
+      delay(5);
+    }
+    delay(100);
+    ledcWrite(0, 0);
+    Serial.println("Door has been closed.");
+    sensed = false;
+  }
+
+  
+}
+'''
