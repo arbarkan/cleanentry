@@ -137,3 +137,9 @@ void loop() {
   
 }
 ```
+
+## Reflections on Our Design
+
+Overall, I believe that the final prototype and concept were largely successful in capturing the intended product opportunity gap with the features presented. In particular, the design is inherently clean due to its contactless operation. Furthermore, it reaches environments and consumers that otherwise would not be able to access automation tools for their small spaces. The customizability of the solution means that it can be flexible enough to fit into a wide range of applications without limiting its functionality or sacrificing accommodation to differently-abled individuals.
+
+However, there are aspects of the process that I believe could use improvement. As an example, our user testing with the low-fidelity prototype indicated that there might be future issues with intuitive usage. If the sensor modules are hidden or otherwise integrated into existing systems, it may not be obvious to users that the door is enabled with automatic functionality. As such, it would make sense to spend more time redesigning the sensor modules in such a way that encourages intuitive operation.
